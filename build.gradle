@@ -1,0 +1,25 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+group = 'com.lcsc.hackathon.kinectcontroller'
+version = '0.0.1'
+
+description = """EsperTest"""
+
+repositories {
+    mavenCentral()
+}
+
+jar {
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    manifest {
+        attributes 'Main-Class': 'com.lcsc.hackathon.kinectcontroller.Main'
+    }
+}
+
+dependencies {
+    compile group: 'com.espertech', name: 'esper', version:'5.1.0'
+    compile 'org.slf4j:slf4j-api:1.7.10'
+    compile 'ch.qos.logback:logback-classic:1.1.2'
+    compile 'ch.qos.logback:logback-core:1.1.2'
+}
