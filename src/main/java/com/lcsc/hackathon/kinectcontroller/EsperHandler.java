@@ -50,15 +50,7 @@ public class EsperHandler {
         Configuration config = new Configuration();
         config.getEngineDefaults().getExecution().setPrioritized(true);
         config.getEngineDefaults().getEventMeta().setDefaultEventRepresentation(Configuration.EventRepresentation.MAP);
-        config.addEventType("Angle", "com.lcsc.hackathon.kinectcontroller.posturerules.Angle");
-        config.addEventType("Distance", "com.lcsc.hackathon.kinectcontroller.posturerules.Distance");
-        config.addEventType("DistanceX", "com.lcsc.hackathon.kinectcontroller.posturerules.DistanceX");
-        config.addEventType("DistanceY", "com.lcsc.hackathon.kinectcontroller.posturerules.DistanceY");
-        config.addEventType("DistanceZ", "com.lcsc.hackathon.kinectcontroller.posturerules.DistanceZ");
-        config.addEventType("AbsoluteDistZ", "com.lcsc.hackathon.kinectcontroller.posturerules.AbsoluteDistZ");
-        config.addEventType("AbsoluteDistX", "com.lcsc.hackathon.kinectcontroller.posturerules.AbsoluteDistX");
-        config.addEventType("AbsoluteDistY", "com.lcsc.hackathon.kinectcontroller.posturerules.AbsoluteDistY");
-        config.addEventType("AbsoluteDistance", "com.lcsc.hackathon.kinectcontroller.posturerules.AbsoluteDistance");
+        config.addEventType("Angle", "com.lcsc.hackathon.kinectcontroller.Angle");
 
         _engine = EPServiceProviderManager.getDefaultProvider(config);
         _engine.initialize();
